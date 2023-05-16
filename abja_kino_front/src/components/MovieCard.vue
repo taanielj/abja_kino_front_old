@@ -3,9 +3,12 @@
         <div class="row">
             <div class="col">
                 <div class="row">
-                    {{movieInfo.title}}
+                    <router-link :to=`/movie/${movieInfo.id}`>
+                        {{movieInfo.title}}
+                    </router-link>
+
                 </div>
-                <div class="row">
+                <div class="row" @click="navigateToMovieView">
                     <PosterImage :image-data-base64="movieInfo.poster"/>
                 </div>
 
@@ -26,6 +29,8 @@
 <script>
 import {defineComponent} from 'vue'
 import PosterImage from "@/components/PosterImage.vue";
+import router from "@/router";
+import {useRoute} from "vue-router";
 
 export default defineComponent({
     name: "MovieCard",
@@ -33,12 +38,26 @@ export default defineComponent({
     data() {
         return {
             movieInfo: {
+                id: 0,
                 title: "Pealkiri",
                 poster: "",
                 timeStamp: "Kellaaeg"
             }
         }
     },
+    methods:{
+        navigateToMovieView() {
+            router.push({name : "MovieRoute"})
+        },
+        route() {
+            useRoute()
+            watch(() => route.params, newValue => {
+                console.log()
+            })
+        }
+    },
+
+
 })
 </script>
 
