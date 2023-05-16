@@ -6,7 +6,7 @@
         <div class="row">
             <div class="d-flex flex-row flex-nowrap justify-content-center">
                 <div class="p-2">
-                    <MovieCard/>
+                    <MovieCard :movie="movieInfo"/>
                 </div>
                 <div class="p-2">
                     <MovieCard/>
@@ -27,8 +27,19 @@
 import MovieCard from "@/components/MovieCard.vue";
 
 export default {
-  name: 'ScheduleView',
+    name: 'ScheduleView',
     components: {MovieCard},
+    data() {
+        return {
+            movieInfo: {
+                id: 1,
+                title: "Pealkiri",
+                poster: "",
+                timeStamp: "Kellaaeg"
+            }
+        }
+    },
+
 }
 </script>
 

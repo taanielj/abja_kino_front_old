@@ -2,20 +2,20 @@
     <div class="container border">
         <div class="row">
             <div class="col">
-                <div class="row">
-                    <router-link :to=`/movie/${movieInfo.id}`>
-                        {{movieInfo.title}}
-                    </router-link>
+                <div class="row" @click="gotoMovie(movieInfo.id)">
+
+                    {{ movieInfo.title }}
+
 
                 </div>
-                <div class="row" @click="navigateToMovieView">
+                <div class=" row" @click="gotoMovie(movieInfo.id)">
                     <PosterImage :image-data-base64="movieInfo.poster"/>
                 </div>
 
             </div>
             <div class="col">
                 <div class="row">
-                    {{movieInfo.timeStamp}}
+                    {{ movieInfo.timeStamp }}
                 </div>
                 <div class="row">
                     Nupp, ValiPilet
@@ -35,27 +35,29 @@ import {useRoute} from "vue-router";
 export default defineComponent({
     name: "MovieCard",
     components: {PosterImage},
-    data() {
-        return {
-            movieInfo: {
+    props: {
+        movie: {
+            type: Object,
+            default: () => ({
                 id: 0,
                 title: "Pealkiri",
                 poster: "",
                 timeStamp: "Kellaaeg"
-            }
-        }
-    },
-    methods:{
-        navigateToMovieView() {
-            router.push({name : "MovieRoute"})
-        },
-        route() {
-            useRoute()
-            watch(() => route.params, newValue => {
-                console.log()
+
             })
         }
     },
+    data() {
+        return {
+            movieInfo: this.movie
+        }
+    },
+    methods: {
+        gotoMovie(id) {
+            router.push({name: 'MovieRoute', params: {id: id}})
+        }
+
+    }
 
 
 })
