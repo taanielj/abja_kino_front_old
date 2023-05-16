@@ -2,6 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col justify-content-lg-start">
+                <<<<<<< HEAD
                 <div class="row mb-2">
                     <h1>Pealkiri</h1>
                 </div>
@@ -9,38 +10,49 @@
                     <PosterImage/>
                 </div>
                 <div class="row mb-2">
-                    <iframe width="560" height="200" src="https://www.youtube.com/embed/CwXOrWvPBPk"  allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <iframe width="560" height="200" src="https://www.youtube.com/embed/CwXOrWvPBPk"
+                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    =======
+                    <div class="row">
+                        <h1>Pealkiri</h1>
+                    </div>
+                    <div class="row w-50">
+                        <PosterImage/>
+                    </div>
+                    <div class="row">
+                        Treiler
+                        >>>>>>> origin/AK-1
+                    </div>
+                </div>
+                <div class="col">
+                    {{ movieInfo.description }}
                 </div>
             </div>
-            <div class="col">
-                {{ movieInfo.description}}
+            <<<<<<< HEAD
+            <div class="row">
+                <div class="column">
+                    <div class="row mb-4 bg-info">
+                        <SeanceCard/>
+                    </div>
+
+                    <div class="row mb-4 bg-info">
+                        <SeanceCard/>
+                    </div>
+
+                    <div class="row mb-4 bg-info">
+                        <SeanceCard/>
+                    </div>
+
+                    <div class="row mb-4 bg-info">
+                        <SeanceCard/>
+                    </div>
+
+
+                </div>
             </div>
         </div>
-        <div class="row">
-            <div class="column">
-                <div class="row mb-4 bg-info">
-                    <SeanceCard/>
-                </div>
-
-                <div class="row mb-4 bg-info">
-                    <SeanceCard/>
-                </div>
-
-                <div class="row mb-4 bg-info">
-                    <SeanceCard/>
-                </div>
-
-                <div class="row mb-4 bg-info">
-                    <SeanceCard/>
-                </div>
-
-
-
-            </div>
-        </div>
-
-
     </div>
+
 </template>
 
 <script>

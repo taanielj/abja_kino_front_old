@@ -1,8 +1,21 @@
 import {createRouter, createWebHistory} from 'vue-router'
+import LoginView from "@/views/LoginView.vue";
+import RegisterView from "@/views/RegisterView.vue";
 import ScheduleView from "@/views/ScheduleView.vue";
 import MovieView from "@/views/MovieView.vue";
 
 const routes = [
+
+
+  {
+    path: '/login',
+    name: 'loginRoute',
+    component: LoginView
+  },
+  {
+    path: '/register',
+    name: 'registerRoute',
+    component: RegisterView},
   {
     path: '/movie/:id',
     name: 'MovieRoute',
@@ -14,6 +27,8 @@ const routes = [
     name: 'ScheduleRoute',
     component: ScheduleView
   },
+
+
   {
     path: '/about',
     name: 'about',
