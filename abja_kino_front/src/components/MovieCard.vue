@@ -1,5 +1,5 @@
 <template>
-    <div class="container border">
+    <div class="container">
         <div class="row">
             <div class="col">
                 <div class="row" @click="gotoMovie(movieInfo.id)">

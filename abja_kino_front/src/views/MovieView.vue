@@ -2,18 +2,40 @@
     <div class="container">
         <div class="row">
             <div class="col justify-content-lg-start">
-                <div class="row">
+                <div class="row mb-2">
                     <h1>Pealkiri</h1>
                 </div>
-                <div class="row w-50">
+                <div class="row mb-2">
                     <PosterImage/>
                 </div>
-                <div class="row">
-                    Treiler
+                <div class="row mb-2">
+                    <iframe width="560" height="200" src="https://www.youtube.com/embed/CwXOrWvPBPk"  allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 </div>
             </div>
             <div class="col">
                 {{ movieInfo.description}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="column">
+                <div class="row mb-4 bg-info">
+                    <SeanceCard/>
+                </div>
+
+                <div class="row mb-4 bg-info">
+                    <SeanceCard/>
+                </div>
+
+                <div class="row mb-4 bg-info">
+                    <SeanceCard/>
+                </div>
+
+                <div class="row mb-4 bg-info">
+                    <SeanceCard/>
+                </div>
+
+
+
             </div>
         </div>
 
@@ -24,10 +46,11 @@
 <script>
 import PosterImage from "@/components/PosterImage.vue";
 import router from "@/router";
+import SeanceCard from "@/components/SeanceCard.vue";
 
 export default {
     name: "MovieView",
-    components: {PosterImage},
+    components: {SeanceCard, PosterImage},
     data() {
         return {
             movieId: {
@@ -45,6 +68,3 @@ export default {
 }
 </script>
 
-<style scoped>
-
-</style>
