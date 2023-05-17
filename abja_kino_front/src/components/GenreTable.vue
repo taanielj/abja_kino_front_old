@@ -7,8 +7,8 @@
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row">3</th>
+        <tr v-for="genre in genres">
+            <td>{{genre.name}}</td>
             <td>
                 <font-awesome-icon @click="navigateToEditAtmLocation(atmLocation.locationId)"
                                    class="hoverable-link me-3" :icon="['fas', 'pen-to-square']"/>
@@ -35,7 +35,7 @@ export default {
     },
     methods: {
         getGenres: function () {
-            this.$http.get("/genre")
+            this.$http.get("/genre/all")
                 .then(response => {
                     this.genres = response.data
                 })
@@ -43,6 +43,9 @@ export default {
                     const errorResponseBody = error.response.data
                 })
         },
+    },
+    beforeMount() {
+        this.getGenres()
     }
 }
 </script>
