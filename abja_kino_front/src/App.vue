@@ -5,6 +5,8 @@
     <router-link to="/login">Logi Sisse</router-link>
   </nav>
   <router-view/>
+
+<!--  asdf-->
 </template>
 
 <style>
