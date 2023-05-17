@@ -28,7 +28,17 @@
 
 <script>
 export default {
-    name: "RegisterView"
+    name: "RegisterView",
+    data() {
+        return {
+            registrationRequest: {
+                username: "",
+                password: "",
+                email: "",
+            },
+        };
+    },
+
 }
 </script>
 
