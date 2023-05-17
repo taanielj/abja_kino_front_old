@@ -6,6 +6,7 @@
                     Administraatori töölaud
                 </h1>
                 <GenreTable/>
+                <TicketTypeTable/>
             </div>
         </div>
     </div>
@@ -13,10 +14,11 @@
 
 <script>
 import GenreTable from "@/components/GenreTable.vue";
+import TicketTypeTable from "@/components/TicketTypeTable.vue";
 
 export default {
     name: "AdminView",
-    components: {GenreTable}
+    components: {TicketTypeTable, GenreTable}
 }
 </script>
 
