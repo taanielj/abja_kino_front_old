@@ -72,7 +72,7 @@ export default {
                 sessionStorage.setItem("userId", this.loginResponse.userId);
                 sessionStorage.setItem("roleName", this.loginResponse.roleName);
                 this.$emit('event-update-nav-menu')
-                router.push({name: 'homeRoute'})})
+                router.push({name: 'ScheduleRoute'})})
             }
         },
 }
