@@ -16,7 +16,8 @@ const routes = [
   {
     path: '/register',
     name: 'registerRoute',
-    component: RegisterView},
+    component: RegisterView
+  },
   {
     path: '/movie/:id',
     name: 'MovieRoute',
