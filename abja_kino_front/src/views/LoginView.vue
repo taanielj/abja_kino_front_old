@@ -47,18 +47,7 @@ export default {
 
         sendLoginRequest() {
 
-            let prefer = this.username;
-            switch (prefer) {
-                case "admin":
-                    prefer = 'code=200, example=admin'
-                    break
-                case "taaniel":
-                    prefer = 'code=200, example=taaniel'
-                    break
-                case "error":
-                    prefer = 'code=400, example=error'
-                    break
-            }
+
 
             this.$http.get("/login",{
                 params: {
@@ -72,7 +61,7 @@ export default {
                 sessionStorage.setItem("userId", this.loginResponse.userId);
                 sessionStorage.setItem("roleName", this.loginResponse.roleName);
                 this.$emit('event-update-nav-menu')
-                router.push({name: 'homeRoute'})})
+                router.push({name: 'ScheduleRoute'})})
             }
         },
 }
