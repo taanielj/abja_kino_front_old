@@ -3,7 +3,8 @@ import LoginView from "@/views/LoginView.vue";
 import RegisterView from "@/views/RegisterView.vue";
 import ScheduleView from "@/views/ScheduleView.vue";
 import MovieView from "@/views/MovieView.vue";
-import AdminView from "@/views/AdminView.vue";
+import AdminView from "@/views/admin/AdminView.vue";
+import AddMovieView from "@/views/admin/AddMovieView.vue";
 
 const routes = [
 
@@ -16,8 +17,7 @@ const routes = [
   {
     path: '/register',
     name: 'registerRoute',
-    component: RegisterView
-  },
+    component: RegisterView},
   {
     path: '/movie/:id',
     name: 'MovieRoute',

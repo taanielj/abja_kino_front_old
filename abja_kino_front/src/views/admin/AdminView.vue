@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import GenreTable from "@/components/GenreTable.vue";
-import TicketTypeTable from "@/components/TicketTypeTable.vue";
+import GenreTable from "@/components/admin/GenreTable.vue";
+import TicketTypeTable from "@/components/admin/TicketTypeTable.vue";
 
 export default {
     name: "AdminView",
