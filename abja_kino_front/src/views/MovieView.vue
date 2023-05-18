@@ -54,7 +54,7 @@ export default {
     data() {
         return {
             movieId: {
-                id: router.currentRoute.value.params.id
+                id: this.$route.params.id
             },
             movieInfo: {
                 id: 1,
